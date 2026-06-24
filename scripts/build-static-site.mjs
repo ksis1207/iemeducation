@@ -23,13 +23,14 @@ const vendorTargets = [
   ['react/umd/react.production.min.js', 'react.production.min.js'],
   ['react-dom/umd/react-dom.production.min.js', 'react-dom.production.min.js'],
 ];
+const npxCommand = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
 mkdirSync(distDir, { recursive: true });
 mkdirSync(vendorDir, { recursive: true });
 
 for (const [sourceName, outputName] of buildTargets) {
   execFileSync(
-    'npx',
+    npxCommand,
     [
       '--yes',
       'esbuild',
@@ -42,6 +43,7 @@ for (const [sourceName, outputName] of buildTargets) {
     ],
     {
       cwd: rootDir,
+      shell: process.platform === 'win32',
       stdio: 'inherit',
     },
   );
