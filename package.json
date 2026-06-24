@@ -1,0 +1,21 @@
+{
+  "name": "iemeducation",
+  "version": "1.0.0",
+  "description": "이 저장소는 `이음통합평생교육원` 홈페이지 제작 작업의 현재 상태를 보관합니다.",
+  "scripts": {
+    "build:site": "node scripts/build-static-site.mjs",
+    "test:enroll:gas": "node scripts/test-enroll-gas.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ResearchForMathew/iemeducation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ResearchForMathew/iemeducation/issues"
+  },
+  "homepage": "https://github.com/ResearchForMathew/iemeducation#readme"
+}
